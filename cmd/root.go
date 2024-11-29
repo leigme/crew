@@ -32,12 +32,12 @@ to quickly create a Cobra application.`,
 			result := make([]string, 0)
 			if strings.EqualFold(args[0], "all") {
 				for _, key := range viper.AllKeys() {
-					result = append(result, viper.GetString(key))
+					result = SplitAppend(result, viper.GetString(key), ",")
 				}
 			} else {
 				for _, key := range viper.AllKeys() {
 					if strings.HasSuffix(key, args[0]) {
-						result = append(result, viper.GetString(key))
+						result = SplitAppend(result, viper.GetString(key), ",")
 					}
 				}
 			}
