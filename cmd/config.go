@@ -5,12 +5,12 @@ import (
 	"path/filepath"
 )
 
-const work_dir string = ".crew"
+const workDir string = ".crew"
 
 func configPath() string {
 	home, err := os.UserHomeDir()
 	if nil != err {
 		return "."
 	}
-	return filepath.Join(home, work_dir)
+	return filepath.Join(home, workDir)
 }

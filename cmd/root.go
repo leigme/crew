@@ -41,7 +41,7 @@ to quickly create a Cobra application.`,
 					}
 				}
 			}
-			fmt.Printf("%s", strings.Join(result, ","))
+			fmt.Printf("%s", strings.Join(Unique(result), ","))
 		default:
 			fmt.Printf("%s", viper.GetString(strings.Join(args, ".")))
 		}
